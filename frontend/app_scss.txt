@@ -1,0 +1,29 @@
+.base {
+  margin: 30px;
+
+  // .main_header {
+  //   &_title {
+  //     display: inline-block;
+  //   }
+  // }
+
+  .base_button {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .submit_button {
+    margin-bottom: 10px;
+  }
+
+  .main_header_title {
+    display: inline-block;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 20px;
+}
