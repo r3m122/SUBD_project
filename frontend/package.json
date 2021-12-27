@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -11,7 +11,8 @@
     "serve:ssr": "node dist/frontend/server/main.js",
     "build:ssr": "ng build && ng run frontend:server",
     "prerender": "ng run frontend:prerender",
-    "prebuild:ssr": "ngcc"
+    "prebuild:ssr": "ngcc",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -38,9 +39,10 @@
     "bootstrap": "^4.6.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
-    "express": "^4.15.2",
+    "express": "^4.17.2",
     "lodash": "^4.17.21",
     "ng-zorro-antd": "^12.1.0",
+    "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
@@ -61,5 +63,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.4.3"
+  },
+  "engines": {
+    "node": "16.13.1",
+    "npm": "8.2.0"
   }
 }
