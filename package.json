@@ -12,6 +12,7 @@
     "build:ssr": "ng build && ng run frontend:server",
     "prerender": "ng run frontend:prerender",
     "prebuild:ssr": "ngcc",
+    "postinstall": "ng build",
     "heroku-postbuild": "ng build --prod"
   },
   "private": true,
